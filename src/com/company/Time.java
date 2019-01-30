@@ -124,7 +124,7 @@ public class Time
     public void incrementHour()
     {
         int nextHour = this.hour + 1;
-        if (nextHour == 25)
+        if (nextHour == 24)
         {
             this.hour = 0;
         }
@@ -166,9 +166,9 @@ public class Time
     public void decrementMinute()
     {
         int nextMinute = this.minute - 1;
-        if (nextMinute == 0)
+        if (nextMinute == -1)
         {
-            --this.minute;
+            this.minute = 59;
             --this.hour;
         }
         else
